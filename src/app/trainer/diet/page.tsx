@@ -20,11 +20,26 @@ const page = async ({}) => {
 
     return (
         <>
-            <TrainerNav />
+            {/* <TrainerNav /> */}
+            <div className="flex space-x-8">
+                <a
+                    className="flex items-center font-medium text-lg text-muted-foreground hover:text-zinc-800"
+                    href="/trainer/plan"
+                >
+                    Fitness Plan
+                </a>
+                <a
+                    className="flex items-center font-medium text-lg"
+                    href="/trainer/diet"
+                >
+                    Diet Plan
+                </a>
+            </div>
+            <hr className="bg-black-500 h-px mb-6 mt-2" />
             <h1 className="flex text-4xl mt-4 font-bold gap-y-3">
                 Your Diet Plan:
             </h1>
-            <hr className="bg-zinc-500 h-px my-6" />
+            <hr className="bg-black-500 h-px my-6" />
             <pre
                 style={{
                     fontSize: "16px",
@@ -40,7 +55,7 @@ const page = async ({}) => {
                 {response}
             </pre>
 
-            <hr className="bg-zinc-500 h-px my-6" />
+            <hr className="bg-black-500 h-px my-6" />
 
             <Button asChild className="py-3">
                 <a href="/trainer">Go Back</a>

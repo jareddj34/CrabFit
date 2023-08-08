@@ -50,7 +50,7 @@ export async function POST(req: Request) {
             and give the most information possible, so as to convince me to pay for your training.
             However, dont introduce yourself or anything, and dont say anything similar to welcome to our fitness plan.
             I am a ${age} year old ${sex} who weights ${weight} and is ${feet}ft ${inches}in. My goals are to ${goal}.
-            What diet should I be doing to achieve my goal? Give me a list of what I should do on each day of the week. DO NOT MAKE YOUR RESPONSE OVER 200 WORDS`,
+            What diet should I be doing to achieve my goal? Give me a list of what I should eat on each day of the week. DO NOT MAKE YOUR RESPONSE OVER 200 WORDS`,
                 },
             ],
         });
