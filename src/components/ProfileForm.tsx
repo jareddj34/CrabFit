@@ -115,8 +115,7 @@ export function ProfileForm() {
 
   const handleEnterPress = (event: any) => {
     if (event.key === "Enter") {
-      event.preventDefault(); // Prevent any default action like a new line in the Textarea
-      //createAttributes(form.getValues());
+      event.preventDefault();
       onSubmit(createAttributes(form.getValues()));
     }
   };
