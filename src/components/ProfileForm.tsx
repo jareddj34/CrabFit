@@ -31,6 +31,7 @@ import { CreateTrainerPayload } from "@/lib/validators/trainer";
 import { useRouter } from "next/navigation";
 import { prisma } from "@/db";
 import { useToast } from "@/components/ui/use-toast";
+import { create } from "domain";
 
 export const profileFormSchema = z.object({
     sex: z.string({
@@ -111,6 +112,13 @@ export function ProfileForm() {
         });
         setLoading(true);
     }
+
+    const handleEnterPress = (event: any) => {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            onSubmit(createAttributes(form.getValues()));
+        }
+    };
 
     return (
         <Form {...form}>
@@ -253,6 +261,7 @@ export function ProfileForm() {
                                     style={{
                                         backgroundColor: "white",
                                     }}
+                                    onKeyDown={handleEnterPress}
                                     {...field}
                                 />
                             </FormControl>
