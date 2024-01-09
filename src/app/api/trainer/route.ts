@@ -58,13 +58,19 @@ export async function POST(req: Request) {
         const content1 = res.data.choices[0].message?.content;
         const content2 = res2.data.choices[0].message?.content;
 
-        if (content1 != undefined && content2 != undefined)
+        if (content1 != undefined && content2 != undefined) {
             await prisma.plans.create({
                 data: {
                     fitnessPlan: content1,
                     dietPlan: content2,
                 },
             });
+        } else {
+            console.error("Content1 or Content2 is undefined");
+            return new Response("Error processing request", {
+                status: 500,
+            });
+        }
 
         return new Response("Data saved successfully!", {
             status: 200,
