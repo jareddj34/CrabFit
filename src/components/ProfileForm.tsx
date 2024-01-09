@@ -84,7 +84,7 @@ export function ProfileForm() {
         onError: (err) => {
             toast({
                 title: "There was an error.",
-                description: "Could not create subreddit",
+                description: "BROOO WTF",
                 variant: "destructive",
             });
         },
