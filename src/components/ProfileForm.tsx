@@ -113,13 +113,6 @@ export function ProfileForm() {
         setLoading(true);
     }
 
-    const handleEnterPress = (event: any) => {
-        if (event.key === "Enter") {
-            event.preventDefault();
-            onSubmit(createAttributes(form.getValues()));
-        }
-    };
-
     return (
         <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
@@ -261,7 +254,6 @@ export function ProfileForm() {
                                     style={{
                                         backgroundColor: "white",
                                     }}
-                                    onKeyDown={handleEnterPress}
                                     {...field}
                                 />
                             </FormControl>
