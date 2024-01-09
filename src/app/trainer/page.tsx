@@ -9,8 +9,8 @@ export default function Home() {
                 Tell us about yourself
             </h1>
             <p className="my-4 text-zinc-500">
-                Put in information about yourself so we can create a plan best
-                suited to your needs!
+                Put in information about yourself so we can create a plan that
+                is best suited to your needs!
             </p>
             <hr className="bg-zinc-500 h-px mb-6" />
             <ProfileForm />
